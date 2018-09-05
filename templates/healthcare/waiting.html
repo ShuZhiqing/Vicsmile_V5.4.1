@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="tm-container-outer" ></div>
+    <div class="wrapper" >
+        <h2 class="content-page-title content-page-title-style-1 subtitle">
+            Victoria’s public dental care waiting list
+        </h2>
+         <div class="summary">
+            People are placed on different waiting lists depending on whether they need routine or urgent dental care.
+            Some people have priority access to care and do not go on the waiting lists.
+            Some people can receive priority denture care.
+        </div>
+
+    <br>
+    <h3 class="content-page-title content-page-title-style-1">
+            Routine or urgent dental care
+        </h3>
+    People contact public dental care providers seeking either routine or urgent care. From there, they will be placed on the appropriate waiting list.
+
+
+<div id="accordion" role="tablist">
+  <div class="cardy">
+    <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         People seeking routine care
+        </a>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+
+       Providers place people on a waiting list according to the Public Dental Non-Urgent Waiting List Policy. The two waiting lists for non-urgent public dental care are:
+          <ul>
+            <li>the General Waiting List. All people seeking care go on this list unless they have no natural teeth or they meet the criteria for priority dentures</li>
+            <li>the Denture Waiting List.</li>
+          </ul>
+        People are treated in the order in which they are placed on the list.
+      </div>
+    </div>
+  </div>
+  <div class="cardy">
+    <div class="card-header" role="tab" id="headingTwo">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          People seeking urgent care
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+          Agencies use the Emergency Demand Management System (EDMS) to assess, triage and manage people seeking urgent care. Following triage, people needing urgent care will be offered an appointment. Anyone assessed as not needing urgent care can choose to go on one of the two non-urgent waiting lists. Anyone needing urgent care can also choose to go on the General Waiting List after their emergency treatment.
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+    <h3 class="content-page-title content-page-title-style-1">
+            What happens when people change dental clinics
+        </h3>
+        People who have been on the waiting list at one Victorian public dental clinic can transfer to another clinic’s waiting list without penalty. The new clinic will backdate the person’s place on its waiting list to the date of placement on the original waiting list.
+
+<br>
+    <br>
+    <h3 class="content-page-title content-page-title-style-1">
+            People who have priority access
+        </h3>
+        People who have priority access to dental care are offered the next available appointment for general care. They are not placed on the General Waiting List. If the person has denture care needs, then they will be offered the next available appointment for denture care or placed on the Priority Denture Waiting List.
+<br>
+    <br>
+<h4 class="content-page-title content-page-title-style-1">
+            Priority denture care
+        </h4>
+    A person needs priority denture care if they meet any of the following criteria:
+    <ul>
+    <li>They have no denture or natural teeth in one or both arches.</li>
+    <li>They have missing front teeth, which causes aesthetic, functional or social problems that a denture could reduce.</li>
+    <li>An existing denture cannot be repaired or fits so poorly that it causes tissue damage if worn.</li>
+    <li>The person’s medical history suggests they need a denture.</li>
+<li>A treatment plan requires urgent extractions.</li>
+    </ul>
+    Treatment for people needing priority denture care includes any treatment that their natural teeth require before their dentures can be constructed.
+<br>
+Providers of public dental care offer care to all people needing priority denture car before people with routine denture needs. A person can be reassessed as having priority denture needs if their needs change to meet the criteria for priority denture care. The provider places this person on the Priority Denture Waiting List using the date of the reassessment, not the date of the original assessment.
+<br>
+    <br>
+Resource
+<ul>
+    <li>
+        <a href="https://www2.health.vic.gov.au/" target="_blank">health.vic</a>
+    </li>
+</ul>
+<br>
+</div>
+
+{% endblock %}
