@@ -3,9 +3,13 @@ from . import views
 
 
 urlpatterns = [
-    path(r'healthcare', views.healthcare, name='healthcare'),
-    path(r'system', views.system, name='system'),
-    path(r'cost', views.cost, name='cost'),
-    path(r'waiting', views.waiting, name='waiting'),
-    path(r'translation', views.translation, name='translation'),
+    path(r'refugee', views.refugee, name='refugee'),
+    path(r'student', views.student, name='student'),
+    path(r'worker', views.worker, name='worker'),
+    path(r'resident', views.resident, name='resident'),
+    path(r'medicare', views.medicare, name='medicare'),
+    path(r'insurance', views.insurance, name='insurance'),
+    path(r'language', views.language, name='language'),
+    path(r'agreement', views.agreement, name='agreement'),
+
 ]

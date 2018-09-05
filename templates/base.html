@@ -51,8 +51,23 @@ http://www.templatemo.com/tm-511-journey
                                   <li class="nav-item">
                                     <a class="nav-link active" href="{% url 'home' %}#top">Home <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'home' %}#tm-section-2">Dental HealthCare</a>
+                                    <li class="nav-item">
+                                    <li class="dropdown">
+                                    <a class="nav-link" data-toggle="dropdown" href="{% url 'home' %}#tm-section-2">Dental HealthCare</a>
+
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{% url 'refugee' %}">Refugees and asylum seekers</a></li>
+                                        <li><a href="{% url 'student' %}">International students </a></li>
+                                        <li><a href="{% url 'worker' %}">Foreign workers</a></li>
+                                        <li><a href="{% url 'resident' %}">Permanent residents</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{% url 'medicare' %}">Medicare</a></li>
+                                        <li><a href="{% url 'insurance' %}">Private Insurance</a></li>
+                                        <li><a href="{% url 'language' %}">Language Service</a></li>
+                                        <li><a href="{% url 'agreement' %}">Reciprocal Health Agreement</a></li>
+                                    </ul>
+
+                                </li>
                                 </li>
                                 <li class="nav-item">
 {#                                    <a class="nav-link" href="{% url 'home' %}#tm-section-3">Diet and Habits</a>#}

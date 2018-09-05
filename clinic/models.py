@@ -45,5 +45,3 @@ class Postcode(models.Model):
     class Meta:
         db_table = 'postcode'
 
-    def __str__(self):
-        return self.name

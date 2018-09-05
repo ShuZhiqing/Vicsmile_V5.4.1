@@ -12,7 +12,7 @@ body {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	/*font-size: 13px;*/
 	font-weight: 300;
-    background: #e6e6e6;
+    background: #edf5f4;
 }
 
 a, button { transition: all 0.3s ease; }
@@ -25,13 +25,14 @@ a:focus {
 p:last-child { margin-bottom: 0; }
 
 .tm-page-wrap { 
-    max-width: 1400px;
+    max-width: 100%;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
     background: white;
 }
 
 .tm-container-outer {
-    max-width: 1400px;
+    /*max-width: 1400px;*/
+    max-width: 100%;
     margin: 0 auto;    
 }
 
@@ -446,6 +447,9 @@ footer {
     padding-bottom: 40px;
     text-align: center;    
     font-size: 0.8rem;
+
+    bottom: 0px;
+    width: 100%;
 }
 
 footer a { color: #fff; }
@@ -500,6 +504,12 @@ footer p { color: white; }
 
 #google-map { height: 600px; }
 
+@media screen and (min-width: 1380px) {
+    .subtitle{padding-top: 15px;}
+
+}
+
+
 @media screen and (min-width: 1080px) {
     .subtitle{padding-top: 15px;}
 
@@ -507,16 +517,19 @@ footer p { color: white; }
 
 @media screen and (max-width: 1080px) {
     .subtitle{padding-top: 15px;}
-    .tm-tab-link-li { width: 25%; }
+    .tm-tab-link-li { width: 25%;}
+
 }
 
 @media screen and (max-width: 1033px) {
     .subtitle{padding-top: 15px;}
-    .tm-slideshow-description { width: 55%; }
+    .tm-slideshow-description { width: 55%;}
+
 }
 
 @media screen and (max-width: 991px) {
     .subtitle{padding-top: 70px;}
+
 
     .tm-top-bar .navbar-expand-lg .navbar-nav .nav-link {
         padding: 15px 20px;
@@ -565,7 +578,6 @@ footer p { color: white; }
 @media screen and (max-width: 986px) {
     .subtitle{padding-top: 70px;}
     .tm-slideshow-section { flex-direction: column; }
-    
     .tm-slideshow,
     .tm-slideshow-description {
         width: 100%;
@@ -606,6 +618,7 @@ footer p { color: white; }
 @media screen and (max-width: 826px) {
 
     .tm-banner-row-header { padding-top: 120px; }
+
 
     .tm-recommended-place-wrap {
         display: flex;
@@ -666,6 +679,7 @@ footer p { color: white; }
         padding-bottom: 50px;
     }
 
+
     .tm-banner-header { margin-top: 100px; }
 
     .tm-form-group-1,
@@ -677,6 +691,7 @@ footer p { color: white; }
     .tm-form-group-4 {
         width: 50%;
     }
+
 }.sf-map-marker {
 	width: 30px;
 	height: 30px;
@@ -688,11 +703,10 @@ footer p { color: white; }
 
 
 
-
 .sf-map-container {
 	padding-top: 2%;
 	width: 100vw;
-	height: 70vh;
+	/*height: 70vh;*/
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-direction: row;
@@ -700,24 +714,32 @@ footer p { color: white; }
 }
 
 .sf-map-sidebar {
-	left: 0;
-	width: 40%;
-	height: 100%;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-direction: column;
-	    flex-direction: column;
-	padding-left: 10px;
-	padding-right: 10px;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    max-height: 600px;
+    min-height: 500px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-left: 10px;
+    padding-left: 20px;
+    padding-right: 5px;
+    overflow-y: scroll;
 }
 
 .sf-map-view {
 	right: 0;
-	width: 40%;
-	height: 100%;
+    width: 700px;
+    height: 600px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 @media screen and (max-width: 600px) {
+
+
 	.sf-map-container {
 		display: -ms-flexbox;
 		display: flex;
@@ -732,10 +754,13 @@ footer p { color: white; }
 	}
 
 	.sf-map-view {
-		width: 100%;
-		height: 70%;
-		background-color: purple;
+		width: 350px;
+		height: 350px;
 	}
+}
+
+@media screen and (max-width: 375px) {
+
 }
 
 #sf-map-input-postcode {
@@ -750,7 +775,7 @@ footer p { color: white; }
 	overflow-y: scroll;
 	width: 100%;
 	margin-top: 20px;
-
+    min-height: 150px
 }
 
 #sf-map-input-submit {
@@ -889,7 +914,7 @@ label {
 @media (min-width: 900px) {
   .card {
     -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
+        flex-basis: 20%;
   }
 
   .card .text {
@@ -910,6 +935,11 @@ label {
     background-color: #69c6ba;
 }
 
+.card2 {
+  /*background: #a9d192;*/
+    background-color: #86D3EC;
+}
+
 .card-inner {
   width: 90%;
 }
@@ -924,7 +954,7 @@ label {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 100%;
+  max-width: 95%;
   -ms-flex-pack: center;
       justify-content: center;
   margin: 0 auto;
@@ -950,8 +980,48 @@ label {
 }
 
 .wrapper {
-    direction: ltr;
-    background:#f8f9fa;
-    padding-left: 50px;
-    padding-right: 50px;"
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    width: 80%;
+}
+
+/* 容器 <div> - 需要定位下拉内容 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {background-color: #f1f1f1; color: #69c6ba;}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+.intrinsic-container {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 30%;
+    width: 50%;
+    height: 50%;
+    margin-right: 1em;
+    display: block;
 }

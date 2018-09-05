@@ -1,7 +1,132 @@
+{#{% extends 'base.html' %}#}
+{##}
+{#{% block content %}#}
+{#<script src="http://maps.google.com/maps/api/js?key=AIzaSyBGtxox2T1OKH_lnf-XPDnS7D9cZAkfZvU&"#}
+{#            type="text/javascript"></script>#}
+{##}
+{#    <div class="container-body style-6">#}
+{#    <div class="subtitle">    </div>#}
+{#        <div class="sf-map-container">#}
+{#            <div class="sf-map-sidebar">#}
+                {#            <form class="sf-map-filters">#}
+                {#                <input type="text" id="sf-map-input-postcode" placeholder="Postcode or Suburb">#}
+                {#                <input type="submit" id="sf-map-input-submit" value="Search">#}
+                {#                <label>#}
+                {#                    <input type="checkbox" id="sf-map-input-checkbox" data-type="gp" value="on">#}
+                {#                    <!-- react-text: 222 -->Doctor<!-- /react-text -->#}
+                {#                </label>#}
+                {#                <label>#}
+                {#                    <input type="checkbox" id="sf-map-input-checkbox" data-type="pharmacy" value="on">#}
+                {#                    <!-- react-text: 225 -->Pharmacy<!-- /react-text -->#}
+                {#                </label>#}
+                {#                <label>#}
+                {#                    <input type="checkbox" id="sf-map-input-checkbox" data-type="hospital" value="on">#}
+                {#                    <!-- react-text: 228 -->Hospital<!-- /react-text -->#}
+                {#                </label>#}
+                {#            </form>#}
+{#                {% for query in queryset_list %}#}
+{##}
+{#                    <div class="sf-map-results">#}
+{#                        <div class="sf-map-result-container" style="border: none;">#}
+{#                            <span class="sf-map-result-title">Clinic Name: {{ query.name }}</span><br>#}
+{#                            <span class="sf-map-result-addr">Address: {{ query.address }}</span><br>#}
+{#                            <span class="sf-map-result-phone">Phone: {{ query.phone }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Waiting Time (months):{{ query.waitingTime }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Speciality:{{ query.sepeciality }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Monday: {{ query.monday }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Tuesday: {{ query.tuesday }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Wednesday: {{ query.wednesday }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Thursday: {{ query.thursday }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Friday: {{ query.friday }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Saturday: {{ query.saturday }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Sunday: {{ query.sunday }}</span><br>#}
+{##}
+{##}
+{#                            <a href={{ query.website }}#}
+{#                                       class="sf-map-result-website">website</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                {% endfor %}#}
+{##}
+{#                {% if error_msg %}#}
+{#                    <h2>{{ error_msg }}</h2>#}
+{#                {% endif %}#}
+{#            </div>#}
+{##}
+{#            <div class="sf-map-view" id="map" style="width: 650px; height: 100%;">#}
+{#                <div style="width: 100%;height: 100%;#}
+{#                position: relative;#}
+{#                margin-right: 100px;#}
+{#                padding-right: 50px"></div>#}
+{##}
+{##}
+{#                <script type="text/javascript">#}
+{##}
+{#                    var locations = [];#}
+{#                    var n = 1;#}
+{##}
+{#                    {% for query in queryset_list %}#}
+{#                        locations.push(['{{ query.name }}', {{ query.lat }}, {{ query.lng }},  '{{ query.group }}', '{{ query.speciality }}', '{{ query.language}}',#}
+{#                             '{{ query.monday }}', '{{ query.tuesday}}', '{{ query.wednesday }}', '{{ query.thursday }}',#}
+{#                            '{{ query.friday}}','{{ query.saturday}}','{{ query.sunday }}',n]);#}
+{##}
+{#                        n = n + 1;#}
+{#                    {% endfor %}#}
+{##}
+{##}
+{#                    var map = new google.maps.Map(document.getElementById('map'), {#}
+{#                        zoom: 10,#}
+{#                        center: new google.maps.LatLng(-37.8136, 144.9631),#}
+{#                        mapTypeId: google.maps.MapTypeId.ROADMAP#}
+{#                    });#}
+{##}
+{#                    var infowindow = new google.maps.InfoWindow();#}
+{##}
+{#                    var marker;#}
+{##}
+{#                    for (var i = 0; i < locations.length; i++) {#}
+{#                        marker = new google.maps.Marker({#}
+{#                            position: new google.maps.LatLng(locations[i][1], locations[i][2]),#}
+{#                            map: map,#}
+{##}
+{#                        });#}
+{##}
+{#                        google.maps.event.addListener(marker, 'click', (function (marker, i) {#}
+{#                            return function () {#}
+{#                                infowindow.setContent("<strong>" + locations[i][0] + "</strong><br>" +#}
+{#                                "Address: " + locations[i][3] + "<br>" + "Group: " + locations[i][5] + '<br>' + "Language: " + locations[i][8] +#}
+{#                                '<br>' + "Monday: " + locations[i][10] +#}
+{#                                '<br>' + "Tuesday: " + locations[i][11] +#}
+{#                                '<br>' + "Wednesday: " + locations[i][12] +#}
+{#                                '<br>' + "Thursday: " + locations[i][13] +#}
+{#                                '<br>' + "Fridayday: " + locations[i][14] +#}
+{#                                '<br>' + "Saturday: " + locations[i][15] +#}
+{#                                '<br>' + "Sunday: " + locations[i][16] );#}
+{#                                infowindow.open(map, marker);#}
+{#                                map.setZoom(14);#}
+{#                                map.setCenter(marker.getPosition());#}
+{#                            }#}
+{#                        })(marker, i));#}
+{#                    }#}
+{##}
+{#                </script>#}
+{##}
+{#            </div>#}
+{##}
+{#        </div>#}
+{##}
+{#    </div>#}
+{##}
+{##}
+{##}
+{#{% endblock %}#}
+
+
 {% extends 'base.html' %}
 
 {% block content %}
-<script src="http://maps.google.com/maps/api/js?key=AIzaSyBGtxox2T1OKH_lnf-XPDnS7D9cZAkfZvU&"
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBGtxox2T1OKH_lnf-XPDnS7D9cZAkfZvU&"
             type="text/javascript"></script>
 
 
@@ -32,6 +157,16 @@
                             <span class="sf-map-result-addr">Address: {{ query.address }}</span><br>
                             <span class="sf-map-result-phone">Phone: {{ query.phone }}</span><br>
                             <span class="sf-map-result-waitinglist">Waiting Time (months):{{ query.waitingTime }}</span><br>
+{#                            <span class="sf-map-result-waitinglist">Speciality:{{ query.sepeciality }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Monday: {{ query.monday }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Tuesday: {{ query.tuesday }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Wednesday: {{ query.wednesday }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Thursday: {{ query.thursday }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Friday: {{ query.friday }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Saturday: {{ query.saturday }}</span><br>#}
+{#                            <span class="sf-map-result-waitinglist">Sunday: {{ query.sunday }}</span><br>#}
+
+
                             <a href={{ query.website }}
                                        class="sf-map-result-website">website</a>
                         </div>
@@ -44,7 +179,7 @@
                 {% endif %}
             </div>
 
-            <div class="sf-map-view" id="map" style="width: 500px; height: 400px;">
+            <div class="sf-map-view" id="map">
                 <div style="width: 100%;height: 100%;
                 margin: 0px;
                 padding: 0px;
@@ -57,17 +192,11 @@
                     var n = 1;
 
                     {% for query in queryset_list %}
-                        locations.push(['{{ query.name }}', {{ query.lat }}, {{ query.lng }}, n]);
+                        locations.push(['{{ query.name }}', {{ query.lat }}, {{ query.lng }},  '{{ query.group }}', '{{ query.speciality }}', '{{ query.language}}',
+                             '{{ query.monday }}', '{{ query.tuesday}}', '{{ query.wednesday }}', '{{ query.thursday }}',
+                            '{{ query.friday}}','{{ query.saturday}}','{{ query.sunday }}',n]);
                         n = n + 1;
                     {% endfor %}
-
-                    {#var locations = [#}
-                    {#    ['Bondi Beach', -33.890542, 151.274856, 4],#}
-                    {#    ['Coogee Beach', -33.923036, 151.259052, 5],#}
-                    {#    ['Cronulla Beach', -34.028249, 151.157507, 3],#}
-                    {#    ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],#}
-                    {#    ['Maroubra Beach', -33.950198, 151.259302, 1]#}
-                    {#];#}
 
                     var map = new google.maps.Map(document.getElementById('map'), {
                         zoom: 10,
@@ -83,12 +212,22 @@
                         marker = new google.maps.Marker({
                             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                             map: map
+
                         });
 
                         google.maps.event.addListener(marker, 'click', (function (marker, i) {
                             return function () {
-                                infowindow.setContent(locations[i][0]);
+                                infowindow.setContent("<strong>" + locations[i][0] + "</strong><br>" +
+                                    "Group: " + locations[i][3] + '<br>' + "Language: " + locations[i][5] +
+                                '<br>' + "Monday: " + locations[i][6] +
+                                '<br>' + "Tuesday: " + locations[i][7] +
+                                '<br>' + "Wednesday: " + locations[i][8] +
+                                '<br>' + "Thursday: " + locations[i][9] +
+                                '<br>' + "Fridayday: " + locations[i][10] +
+                                '<br>' + "Saturday: " + locations[i][11] +
+                                '<br>' + "Sunday: " + locations[i][12] );
                                 infowindow.open(map, marker);
+                                map.setZoom(14);
                             }
                         })(marker, i));
                     }

@@ -1,22 +1,37 @@
 from django.shortcuts import render
 
+
 # Create your views here.
-def healthcare(request):
-    return render(request, 'healthcare/healthcare.html', context={})
+def refugee(request):
+    return render(request, 'healthcare/refugee.html', context={})
 
 
-def system(request):
-    return render(request, 'healthcare/system.html', context={})
+def student(request):
+    return render(request, 'healthcare/student.html', context={})
 
 
-def cost(request):
-    return render(request, 'healthcare/cost.html', context={})
+def worker(request):
+    return render(request, 'healthcare/worker.html', context={})
 
 
-def waiting(request):
-    return render(request, 'healthcare/waiting.html', context={})
+def resident(request):
+    return render(request, 'healthcare/resident.html', context={})
 
 
-def translation(request):
-    return render(request, 'healthcare/translation.html', context={})
+def medicare(request):
+    return render(request, 'healthcare/medicare.html', context={})
+
+
+def insurance(request):
+    return render(request, 'healthcare/insurance.html', context={})
+
+
+def language(request):
+    return render(request, 'healthcare/language.html', context={})
+
+
+def agreement(request):
+    return render(request, 'healthcare/agreement.html', context={})
+
+
 
