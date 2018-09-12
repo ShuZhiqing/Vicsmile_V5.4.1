@@ -56,34 +56,31 @@
                     </button>
                     <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
                         <div class="navbar-nav ml-auto">
-                        <div class="nav-item">
-                            <a class="nav-link active" href="{% url 'home' %}#top">Find Dental Clinics <span
-                                    class="sr-only">(current)</span></a>
+                            <div class="nav-item">
+                                <a class="nav-link active" href="{% url 'home' %}#top">Find Dental Clinics <span
+                                        class="sr-only">(current)</span></a>
+                            </div>
+                            <div class="nav-item">
+{#                                <div class="dropdown">#}
+{#                                    <a class="nav-link" data-toggle="dropdown" href="{% url 'home' %}#tm-section-2">Dental#}
+{#                                        HealthCare <i class="fa fa-caret-down"></i></a>#}
+{#                                    <div class="dropdown-menu">#}
+{#                                        <li><a href="{% url 'refugee' %}">Refugees and asylum seekers</a></li>#}
+{#                                        <li><a href="{% url 'student' %}">International students </a></li>#}
+{#                                        <li><a href="{% url 'worker' %}">Foreign workers</a></li>#}
+{#                                        <li><a href="{% url 'resident' %}">Permanent residents</a></li>#}
+{#                                        <li><a href="{% url 'medicare' %}">Medicare</a></li>#}
+{#                                        <li><a href="{% url 'insurance' %}">Private Insurance</a></li>#}
+{#                                        <li><a href="{% url 'language' %}">Language Service</a></li>#}
+{#                                        <li><a href="{% url 'agreement' %}">Reciprocal Health Agreement</a></li>#}
+{#                                    </div>#}
+{#                                </div>#}
+                                <a class="nav-link" href="{% url 'home' %}#tm-section-2">Dental Healthcare</a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="{% url 'home' %}#tm-section-3">Diet and Habits</a>
+                            </div>
                         </div>
-{#                        <div class="nav-item">#}
-{#                            <a class="nav-link " href="{% url 'home' %}#top">Find Dental Clinics</a>#}
-{#                        </div>#}
-                        <div class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-link" data-toggle="dropdown" href="{% url 'home' %}#tm-section-2">Dental
-                                HealthCare <i class="fa fa-caret-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{% url 'refugee' %}">Refugees and asylum seekers</a></li>
-                                <li><a href="{% url 'student' %}">International students </a></li>
-                                <li><a href="{% url 'worker' %}">Foreign workers</a></li>
-                                <li><a href="{% url 'resident' %}">Permanent residents</a></li>
-                                <li class="divider"></li>
-                                <li><a href="{% url 'medicare' %}">Medicare</a></li>
-                                <li><a href="{% url 'insurance' %}">Private Insurance</a></li>
-                                <li><a href="{% url 'language' %}">Language Service</a></li>
-                                <li><a href="{% url 'agreement' %}">Reciprocal Health Agreement</a></li>
-                            </ul>
-                        </div>
-                        </div>
-                        <div class="nav-item">
-                            <a class="nav-link" href="{% url 'home' %}#tm-section-3">Diet and Habits</a>
-                        </div>
-                    </div>
                     </div>
                 </nav>
             </div> <!-- row -->
@@ -115,8 +112,9 @@
                             <div class="form-row tm-search-form-row">
                                 <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
                                     <label for="inputLocation">My Location</label>
-                                    <button type="button" id="locatee" style="border: none; background-color: #f5f6f6; color: #17a2b8">
-{#                                        <img src="{% static 'img/locate.jpg' %}" style="max-height: 25px; " alt="locatee">#}
+                                    <button type="button" id="locatee"
+                                            style="border: none; background-color: #f5f6f6; color: #17a2b8">
+                                        {#                                        <img src="{% static 'img/locate.jpg' %}" style="max-height: 25px; " alt="locatee">#}
                                         <i class="fa fa-map-marker"></i>
                                         Use Current Location
                                     </button>
@@ -245,7 +243,7 @@
             </div>
         </div>
     </section>
-</div >
+</div>
 
 
 <div class="tm-container-outer" id="tm-section-2">
@@ -256,17 +254,17 @@
             <h3>What is your status?</h3>
         </div>
         <a class="card card1" href="{% url 'refugee' %}">
-{#        <div class="card card1" >#}
+            {#        <div class="card card1" >#}
             <div class="card-inner">
                 <img src="{% static 'img/refugee.png' %}" alt="Refugees and asylum seekers">
                 <div class="text">
                     <p>Refugees and asylum seekers</p>
                 </div>
-{#            </div>#}
-        </div>
+                {#            </div>#}
+            </div>
         </a>
         <a class="card card1" href="{% url 'student' %}">
-            <div class="card-inner" >
+            <div class="card-inner">
                 <img src="{% static 'img/student.png' %}" alt="International students">
                 <div class="text">
                     <p>International students</p>
@@ -280,7 +278,7 @@
                 </div>
             </div>
         </a>
-        <a class="card card1" href="{% url 'resident' %}" >
+        <a class="card card1" href="{% url 'resident' %}">
             <div class="card-inner" style="margin-bottom: -5px">
                 <img src="{% static 'img/pr.png' %}" alt="Permanent residents" style="margin-bottom: -25px">
                 <div class="text" style="margin-top: 35px">
@@ -309,7 +307,7 @@
             </div>
         </a>
         <a class="card card2" href="{% url 'language' %}">
-            <div class="card-inner"  style="margin-top: -35px">
+            <div class="card-inner" style="margin-top: -35px">
                 <img src="{% static 'img/translation.png' %}" alt="Language Service">
                 <div class="text">
                     <p>Language Service</p>
@@ -330,17 +328,204 @@
 {#    </div>#}
 <div class="tm-container-outer" id="tm-section-3">
     <h1 class="text-uppercase mb-4 " style="text-align:center; padding-top: 70px;"> Diet and Habits</h1>
+    <div id="carouselContent" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselContent" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselContent" data-slide-to="1"></li>
+            <li data-target="#carouselContent" data-slide-to="2"></li>
+            <li data-target="#carouselContent" data-slide-to="3"></li>
+            <li data-target="#carouselContent" data-slide-to="4"></li>
+            <li data-target="#carouselContent" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active text-center p-4">
+                <div class="carousel-text">
+                    <h2 class="content-page-title content-page-title-style-1 subtitle"
+                        style="color: #17a2b8; float: left;">
+                        Food and Drink for Healthy Teeth
+                    </h2>
+                    <br>
+                    <br>
+                    <div class="summary" style="text-align: left;">
+                        For healthy teeth, food and drinks should be free of added sugar whenever possible.
+                        <br>
+                        <br>
+                        Tooth decay is a diet related disease. Sugars in the food and drinks you consume mix with the
+                        bacteria in the plaque on your teeth and produce acids.
+                        These acids attack the outer layers of the tooth.
+                        <br>
+                        <br>
+                        Consuming sweet food and drink between meals is a major cause of tooth decay; this is because
+                        there is no between-meal period for teeth to undergo recovery.
+                        <br>
+                        <br>
+                        The more often sweet foods and drinks are consumed, the higher the risk of tooth decay.
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item text-center p-4">
+                <div class="carousel-text">
+                    <h2 class="content-page-title content-page-title-style-1 subtitle"
+                        style="color: #17a2b8; float: left;">
+                        Tips for Healthy Teeth
+                    </h2>
+                    <br>
+                    <br>
+                    <div class="summary" style="text-align: left;">
+                        <ul>
+                            <li>Limit how often you have sweet foods and consume them during meal times rather than between meals.</li>
+                            <li>Limit sweet drinks, including fruit juices that contains natural sugar</li>
+                            <li>Choose healthy snacks such as fresh fruit, vegetable sticks, natural yogurt, plain popcorn, soups or cheese.</li>
+                            <li>Choose fresh fruit over dried fruit, as dried fruit will leave a sticky residue on your teeth and can contribute to tooth decay. </li>
+                            <li>Cut down the sugar added to cups of tea and coffee.</li>
+                            <li>Drink fluoridated tap water and plain milk instead of soft drinks, juice or cordial.</li>
+                            <li>Reduce the amount of alcohol and cigarettes you smoke each day.</li>
+                            <li>Have a piece of cheese after consuming sweet or acidic food as dairy products assist in reversing the decay process.</li>
+                            <li>Brush your teeth at least twice a day to ensure plaque removed.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item text-center p-4">
+                <div class="carousel-text">
+                    <h2 class="content-page-title content-page-title-style-1 subtitle"
+                        style="color: #17a2b8; float: left;">
+                        Fluoridated Water
+                    </h2>
+                    <br>
+                    <br>
+                    <div class="summary" style="text-align: left;">
+                        Fluoride is a naturally occurring compound found in plants, rocks and at very low levels in almost all fresh water.
+                        It is used in many products related to oral health such as toothpastes and is also added to some of the drinking water in Victoria.
+                        <ul>
+                            <li>Water fluoridation is the adjustment of fluoride in drinking water to a level that helps protect teeth against tooth decay, resulting in fewer cavities.</li>
+                            <li>Fluoride can limit the amount of acid produced by food and drink and can also repair damage before it becomes permanent.</li>
+                            <li>By reducing tooth decay, water fluoridation can save individuals and families money on dental treatment such as fillings.
+                                It can also mean less time away from school and work because of tooth pain or dental treatment.</li>
+                            <li>The amount of fluoride added to the water is carefully controlled and monitored. You cannot taste or smell fluoride in your water.</li>
+                            <li>More than three quarters of Victorians now drink water with either naturally-occurring or added fluoride. Water fluoridation is an effective,
+                                inexpensive and socially equitable way to reduce tooth decay in children and adults. </li>
+                            <li>There is no scientific evidence linking water fluoridation with side effects such as cancer, bone fractures, Alzheimer’s disease or allergy.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
+        <div class="carousel-item text-center p-4">
+                <div class="carousel-text">
+                    <h2 class="content-page-title content-page-title-style-1 subtitle"
+                        style="color: #17a2b8; float: left;">
+                        Negative Effects of Smoking, Alcohol, and Recreational Drugs on Dental Health
+                    </h2>
+                    <br>
+                    <br>
+                    <div class="summary" style="text-align: left;">
+                        The effects of smoking, alcohol and recreational drugs on the mouth include:
+                        <ul>
+                            <li>oral cancer and other mouth skin diseases</li>
+                            <li>tooth staining</li>
+                            <li>bad breath</li>
+                            <li>sensitivity</li>
+                            <li>tooth loss</li>
+                            <li>tooth decay</li>
+                            <li>cracked and broken teeth</li>
+                        </ul>
+                        <br>
+                        <strong>What you can do to minimise damage:</strong>
+                        <ul>
+                            <li>Quit smoking, or reduce the amount of alcohol and cigarettes you smoke each day.</li>
+                            <li>Brush your teeth at least twice a day using fluoridated toothpaste.</li>
+                            <li>Limit sweet foods to meal times.</li>
+                            <li>Choose tap water rather than sweet drinks.</li>
+                            <li>Rinse your mouth with water after taking any sweet tasting medicine or drug replacement therapy such as methadone.</li>
+                            <li>Chew sugar-free gum.</li>
+                            <li>Immediately seek oral health advice if you have sores in your mouth that do not heal, or red or white patches on your lips or tongue.</li>
+                            <li>Use Recaldent or tooth mousse to protect your teeth if recommended by your oral health professional.</li>
+                            <li>If you vomit, rinse your mouth with water. If possible, rub some toothpaste on your teeth with a finger. Do not use a toothbrush until at least 30 minutes after vomiting.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item text-center p-4">
+                <div class="carousel-text">
+                    <h2 class="content-page-title content-page-title-style-1 subtitle"
+                        style="color: #17a2b8; float: left;">
+                        Calcium, Vitamin D and Phosphorus
+                    </h2>
+                    <br>
+                    <br>
+                    <div class="summary" style="text-align: left;">
+                        Calcium, vitamin D and phosphorus all play a vital role in the formation and maintenance of healthy teeth and gums in both children and adults.
+                        <br>
+                        <br>
+                        Calcium plays a role in making the jaw bones healthy and strong to hold the teeth in place. However, calcium needs phosphorus to maximise its bone strengthening benefits.
+                        <br>
+                        <br>
+                        Children’s teeth need adequate calcium and phosphorus to form a hard structure during growth.
+                        <br>
+                        <br>
+                        Vitamin D regulates the body’s balance of calcium and phosphorus and can promote absorption.
+                        Vitamin D can also help to decrease inflammation of gums which is associated with gum disease.
+                        <br>
+                        <br>
+                        A healthy diet is essential for healthy teeth. The table below shows just some of the foods that contain calcium, vitamin D and phosphorus.
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item text-center p-4">
+                <div class="carousel-text">
+                    <h2 class="content-page-title content-page-title-style-1 subtitle"
+                        style="color: #17a2b8; float: left;">
+                        Advice for Pregnant Mother
+                    </h2>
+                    <br>
+                    <br>
+                    <div class="summary" style="text-align: left;">
+                        <strong>Eat Well</strong>
+                        <ul>
+                            <li>Your growing baby's calcium demands are high so you should increase your own calcium consumption to compensate.
+                                Eat calcium-enriched foods such as dairy or soy alternatives.</li>
+                            <li>Eat a nutritious diet every day including fruits, vegetables, grains, beans and lean meats.</li>
+                            <li>Try not to eat too many sweet foods.</li>
+                        </ul>
+                        <br>
+                        <strong>Clean Well</strong>
+                        <ul>
+                            <li>Brush your teeth twice a day for 2 to 3 minutes.</li>
+                            <li>Aim the bristles of the toothbrush at a 45-degree angle, towards the gum line.</li>
+                            <li>Floss your teeth at least once a day.</li>
+                        </ul>
+                        <br>
+                        <strong>Drink Well</strong>
+                        <ul>
+                            <li>Drink lots of tap water, especially if fluoridated.</li>
+                            <li>Drink non-sweetened dairy milk or calcium-fortified alternatives. Calcium is important for your baby's bones and teeth.</li>
+                            <li>Try not to drink too many sugary drinks.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 </div>
 
 
 <footer>
-    <p class="mb-0">Copyright © <span class="tm-current-year">2018</span> VicSmile. Designed by <a
-            rel="nofollow" href="http://bit.ly/quadcore-vicsmile" target="_blank"
-            style="color: #0062cc">QudaCore</a></p>
+{#    <p class="mb-0">Copyright © <span class="tm-current-year">2018</span> VicSmile. Designed by <a#}
+{#            rel="nofollow" href="http://bit.ly/quadcore-vicsmile" target="_blank"#}
+{#            style="color: #0062cc">QudaCore</a></p>#}
+                    <p class="mb-0">Copyright © <span class="tm-current-year">2018</span> VicSmile. Designed byQudaCore</p>
+{#                 <a rel="nofollow" href="http://bit.ly/quadcore-vicsmile" target="_blank" style="color: #0062cc">#}
+
 </footer>
-
-
 
 
 <!-- load JS files -->
@@ -405,7 +590,7 @@
         });
 
 
-         //get location
+        //get location
         $('#locatee').click(function (event) {
             event.preventDefault();
 
@@ -417,6 +602,7 @@
                 $("#inputLocation").val('Your browser doesn\'t support.');
             }
         });
+    })
 
 
         // function to get lat/long and plot on a google map
@@ -444,7 +630,6 @@
                         }
 
 
-
                         $("#inputLocation").val(suburb);
                     } else {
                         window.alert('No results found');
@@ -453,7 +638,7 @@
             });
 
         }
-    })
+
 
 
     {#    loadGoogleMap();                                       // Google Map                #}
@@ -635,6 +820,8 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+
 
 </script>
 

@@ -74,6 +74,10 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATE_DIRS = (
+    BASE_DIR + '/app/templates',
+)
+
 WSGI_APPLICATION = 'Vicsmile_V5.wsgi.application'
 
 

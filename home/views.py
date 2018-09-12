@@ -7,7 +7,7 @@
 #
 from django.shortcuts import render
 from clinic.models import Postcode
-
+from healthcare.urls import *
 
 # Create your views here.
 # def home(request):

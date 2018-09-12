@@ -71,13 +71,14 @@ def search(request):
         #     Q(postcode__icontains=destination.lower())).filter(Q(language__icontains=language.lower()))
 
     # if there are no match, return the message
-    if not queryset_list :
+    if not queryset_list:
         error_msg = 'No Results'
 
     # return the result page
     return HttpResponse(render(request, template, {
         'error_msg': error_msg,
         'queryset_list': queryset_list,
+        'curlocation': curlocation,
     }))
 
 
