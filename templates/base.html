@@ -33,29 +33,31 @@ http://www.templatemo.com/tm-511-journey
       </head>
 
       <body>
-        <div class="tm-main-content" id="top">
-            <div class="tm-top-bar-bg"></div>    
-            <div class="tm-top-bar" id="tm-top-bar">
+        <div class="tm-main-content" id="top" >
+            <div class="tm-top-bar-bg" style="height: 75px"></div>
+            <div class="tm-top-bar" id="tm-top-bar" style="height: 65px;">
                 <div class="container">
-                    <div class="row">
-                        <nav class="navbar navbar-expand-lg narbar-light">
-                            <a class="navbar-brand mr-auto" href="#">
-                                <img src="{% static 'img/tooth.png' %}" alt="Site logo">
+                    <div class="row" style="height: 65px">
+                        <nav class="navbar navbar-expand-lg narbar-light" >
+                            <a class="navbar-brand mr-auto" href={% url 'home' %}# style="font-size: 1.4rem">
+                                <img src="{% static 'img/tooth.png' %}" alt="Site logo" style="width: 40px;">
                                 vicsmile
                             </a>
                             <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
-                                <ul class="navbar-nav ml-auto">
-                                  <li class="nav-item">
-                                    <a class="nav-link active" href="{% url 'home' %}#top">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                    <li class="nav-item">
-                                    <li class="dropdown">
-                                    <a class="nav-link" data-toggle="dropdown" href="{% url 'home' %}#tm-section-2">Dental HealthCare</a>
-
-                                    <ul class="dropdown-menu">
+                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white" style="height: 65px">
+                                <ul class="navbar-nav ml-auto" >
+{#                                  <li class="nav-item" style="height: 65px">#}
+{#                                    <a class="nav-link" href="{% url 'home' %}#section0" style="height: 65px;padding-top: 20px;">Home </a>#}
+{#                                </li>#}
+                                    <li class="nav-item" style="height: 65px">
+                                        <a class="nav-link" href="{% url 'home' %}#top" style="height: 65px;padding-top: 20px;">Find Dental Clinics</a>
+                                    </li>
+                                    <li class="nav-item" style="height: 65px">
+                                    <li class="dropdown" style="height: 65px">
+                                    <a class="nav-link active" style="height: 65px;padding-top: 20px;" data-toggle="dropdown" href="{% url 'home' %}#tm-section-2">Dental HealthCare <i class="fa fa-caret-down"></i></a>
+                                    <ul class="dropdown-menu" >
                                         <li><a href="{% url 'refugee' %}">Refugees and asylum seekers</a></li>
                                         <li><a href="{% url 'student' %}">International students </a></li>
                                         <li><a href="{% url 'worker' %}">Foreign workers</a></li>
@@ -69,15 +71,12 @@ http://www.templatemo.com/tm-511-journey
 
                                 </li>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item" style="height: 65px">
 {#                                    <a class="nav-link" href="{% url 'home' %}#tm-section-3">Diet and Habits</a>#}
-                                    <a class="nav-link" href="{% url 'home' %}#top">Diet and Habits</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'home' %}#tm-section-search">Find Dental Clinics</a>
+                                    <a class="nav-link" style="height: 65px;padding-top: 20px;" href="{% url 'home' %}#tm-section-3">Diet and Habits</a>
                                 </li>
                             </ul>
-                        </div>                            
+                        </div>
                     </nav>
                 </div> <!-- row -->
             </div> <!-- container -->
@@ -101,87 +100,17 @@ http://www.templatemo.com/tm-511-journey
     <script src="{% static 'js/jquery.singlePageNav.min.js' %}"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
     <script src="{% static 'slick/slick.min.js' %}"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
     <script src="{% static 'js/jquery.scrollTo.min.js' %}"></script>           <!-- https://github.com/flesler/jquery.scrollTo -->
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
 
-{#    <script>#}
-    {#    /* Google Maps#}
-    {#    ------------------------------------------------*/#}
-    {#    var map = '';#}
-    {#    var center;#}
-    {##}
-    {#    function initialize() {#}
-    {#        var mapOptions = {#}
-    {#            zoom: 16,#}
-    {#            center: new google.maps.LatLng(37.769725, -122.462154),#}
-    {#            scrollwheel: false#}
-    {#        };#}
-    {##}
-    {#        map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);#}
-    {##}
-    {#        google.maps.event.addDomListener(map, 'idle', function() {#}
-    {#          calculateCenter();#}
-    {#      });#}
-    {##}
-    {#        google.maps.event.addDomListener(window, 'resize', function() {#}
-    {#          map.setCenter(center);#}
-    {#      });#}
-    {#    }#}
-    {##}
-    {#    function calculateCenter() {#}
-    {#        center = map.getCenter();#}
-    {#    }#}
-    {##}
-    {#    function loadGoogleMap(){#}
-    {#        var script = document.createElement('script');#}
-    {#        script.type = 'text/javascript';#}
-    {#        script.src = 'https://maps.googleapis.com/maps/api/js?&key=AIzaSyBGtxox2T1OKH_lnf-XPDnS7D9cZAkfZvU&v=3.exp&callback=initialize';#}
-    {##}
-    {#        document.body.appendChild(script);#}
-    {#    }#}
-    {##}
-    {#    /* DOM is ready#}
-    {#    ------------------------------------------------*/#}
-    {#    $(function(){#}
-    {##}
-    {##}
-    {#        // Close navbar after clicked#}
-    {#        $('.nav-link').click(function(){#}
-    {#            $('#mainNav').removeClass('show');#}
-    {#        });#}
-    {##}
-    {##}
-    {#        //get location#}
-    {#        $('#locatee').click(function(event){#}
-	{#		    event.preventDefault();#}
-    {##}
-			    {#var is_chrome = /chrom(e|ium)/.test( navigator.userAgent.toLowerCase() );#}
-                {#var is_ssl    = 'https:' == document.location.protocol;#}
-                {#if( is_chrome && ! is_ssl ){#}
-                {#    return false;}#}
-    {##}
-	{#		    $('#inputLocation').val("Finding location. Please wait...");#}
-	{#		    // check if browser supports the geolocation api#}
-	{#		    if(navigator.geolocation) {#}
-	{#			    navigator.geolocation.getCurrentPosition(success);			// if geolocation supported, call function#}
-	{#		    } else {#}
-	{#			    $("#inputLocation").val('Your browser doesn\'t support the geolocation api.');#}
-	{#		    }#}
-	{#	    });#}
-    {##}
-    {##}
-    {#        // function to get lat/long and plot on a google map#}
-	{#	    function success(position) {#}
-    {##}
-    {#            var latitude = position.coords.latitude;				// set latitude variable#}
-    {#            var longitude = position.coords.longitude;			// set longitude variable#}
-    {#            var latLongResponse = latitude + ',' + longitude;#}
-    {#            $("#inputLocation").val(latLongResponse);#}
-    {#        }#}
-    {##}
-    {#        loadGoogleMap();                                       // Google Map#}
-    {#        $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright#}
-    {#    });#}
-    {##}
-    {#</script>#}
+        $(document).ready(function () {
+
+            $(document).off('click.bs.dropdown.data-api');
+        });
+
+    </script>
 
 </body>
 </html>

@@ -25,3 +25,7 @@ def home(request):
     }
 
     return render(request, template_name, queryset)
+
+
+def password(request):
+    return render(request, 'home/password.html', context={})
